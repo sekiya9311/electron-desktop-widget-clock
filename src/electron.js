@@ -1,19 +1,19 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const electron = require('electron')
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
 
-let mainWindow = null;
+let mainWindow = null
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit();
+    app.quit()
   }
-});
+})
 
-const APP_WIDTH = 500;
-const APP_HEIGHT = 500;
+const APP_WIDTH = 500
+const APP_HEIGHT = 500
 app.on('ready', () => {
-  const SCREEN_SIZE = electron.screen.getPrimaryDisplay().size;
+  const SCREEN_SIZE = electron.screen.getPrimaryDisplay().size
   mainWindow = new BrowserWindow({
     width: APP_WIDTH,
     height: APP_HEIGHT,
@@ -23,10 +23,10 @@ app.on('ready', () => {
     x: SCREEN_SIZE.width - APP_WIDTH,
     y: SCREEN_SIZE.height - APP_HEIGHT,
     alwaysOnTop: true
-  });
-  mainWindow.loadURL('file:///' + __dirname + '/index.html');
+  })
+  mainWindow.loadURL('file:///' + __dirname + '/index.html')
   mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
+    mainWindow = null
+  })
   mainWindow.webContents.openDevTools()
-});
+})

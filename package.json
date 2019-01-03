@@ -5,7 +5,7 @@
   "main": "src/electron.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
+    "start": "npm run format & electron .",
     "format": "prettier ./src/*.{html,js,jsx,css} ./src/components/*.{html,js,jsx,css} --write"
   },
   "author": "sekiya9311",

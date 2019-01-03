@@ -5,9 +5,10 @@ import * as ReactDOM from 'react-dom'
 import { Calendar } from './components/Calendar'
 import { Clock } from './components/Clock'
 
-ReactDOM.render((
+ReactDOM.render(
   <div>
     <Calendar />
     <Clock />
-  </div>
-), document.getElementById('app'))
+  </div>,
+  document.getElementById('app')
+)
