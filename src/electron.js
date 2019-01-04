@@ -10,8 +10,8 @@ app.on('window-all-closed', () => {
   }
 })
 
-const APP_WIDTH = 500
-const APP_HEIGHT = 500
+const APP_WIDTH = 300
+const APP_HEIGHT = 300
 app.on('ready', () => {
   const SCREEN_SIZE = electron.screen.getPrimaryDisplay().size
   mainWindow = new BrowserWindow({
