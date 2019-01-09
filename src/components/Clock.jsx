@@ -94,7 +94,12 @@ export class Clock extends React.Component {
             </span>
           )
         })}
-        <canvas width={side} height={side} ref="canvas" />
+        <canvas
+          width={side}
+          height={side}
+          style={{ position: 'absolute' }}
+          ref="canvas"
+        />
       </div>
     )
   }
